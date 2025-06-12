@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+      <meta name="author" content="Tung Nguyen">
+      <meta name="description" content="Tung Nguyen's Home">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Welcome to Tung Nguyen's website!</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="icon" type="image/x-icon" href="../photo/favicon.ico">
+   </head>
+   <body>
+      <div class="navbar">
+         <p class="subject">／(=✪ x ✪=)＼</p>
+         <nav class="navButton">
+            <a  href="index.html">Home</a>
+            <a href="past.html">Past</a>
+            <a href="future.html">Future</a>
+            <a class="activeButton" href="comments.html">Comments</a> 
+         </nav>
+      </div>
+      <div id="commentHeader">
+         <h1 id="commentTitle">Comments</h1>
+      </div>
+      <main>
+         <h2>Technical Aspects</h2>
+         <p>These website pages are developed according to the UTS Web Assignment specification.  <br>
+            As required, a folder called websystems is created with four HTML files (index.html, past.html, future.html and comments.html) and one CSS file (websystems.css). 
+         </p>
+         <p>My HTML general structure is:</p>
+         <table class="techTable">
+            <tr>
+               <td>head</td>
+            </tr>
+            <tr>
+               <td>body</td>
+            </tr>
+            <tr>
+               <td>footer</td>
+            </tr>
+         </table>
+         <p>Each part is completed by the use of div (class or ID).</p>
+         <p>The head contain all the information that only the browser recieves. These things are the title of the websites, the favicon, others meta tag and link to the CSS stylesheets and viewport.</p>
+         <p>The body is where almost all of the CSS class and ID are used.</p>
+         <table class="techTable">
+            <tr>
+               <td>.navBar</td>
+            </tr>
+            <tr>
+               <td>#header</td>
+            </tr>
+            <tr>
+               <td>main</td>
+            </tr>
+            <tr>
+               <td>#gallery (index.html only)</td>
+            </tr>
+         </table>
+         <p>The .navBar is fixed position with a z index of 999 to always stay on top where ever you are on the website. The .navButtons are linked to other pages. The CSS3 ":hover" and .activeButton are responsible for how the button behave. If hovered over the button will change it's display. If the button is on the active page, then it's display will be different from the rest.</p>
+         <p>The #header cannot be a class because each page has a unique header. But basically each one have a background image and a short line to tell the users about the website. Each page has a unique #header and #title. The background image is done throught CSS by backgroung-image and setting the image width to 100% and height varies.</p>
+         <p>The main is where most of the class and ID are from. Overall, main is set to have a consistent margin, padding, line height, text size, text color and background color. In index.html, the two text passages can pop up and change color. Once again, this is done by :hover. In other pages, tables and lists can be found. Things are pretty standard here. The past table cells on an even row are colored by ":nth-child(even)". The past has unordered lists within the table, and the future has an ordered list. Images are also in past and future too. In this comment page, hyperlink text is used.</p>
+         <p>The photo gallery native to index.html is a grid display of 4 cells. A grid is built by declaring the position. Then the image is assign to each postion and cover fit. The biggest image is assigned to 2 cells, while others are assigned to the rest. The ":hover" is used again to show the picture's description if hovered over.</p>
+         <p>The @media query is used in CSS to create a viewport for mobile devices. Two resolution is considered: width of 768px (tablet or old school monitor) and 576px (smartphone). "@media only screen and (max-width:576px)" this line mean only if that device has a screen with a size of 576 or lower, then the changes will be applied. Same goes with 768px. The NavBar is change in both cases, since the original one would go out of frame, a NavBar with 2 rows is used instead. For 576px, the index's greetings line has to be hightlighted with a transparent black to distinguish it from the background. Other than that, the padding and images are tuned to fit better with these devices. I have to remove the hovering features of text passages and images for both of the smaller screen size, since I don't think it worths much and it affects other element too much.</p>
+         <p>The footer has a class ".Top" to style to Go Top button. With ":hover", the Go Top button is more interactive. In case you haven't guessed it, it takes you back to the top of the page. However, you won't see this button when you are using a phone. Other than that, the footer also display other basic information.</p>
+         <h2>Aesthetics</h2>
+         <p>My main idea when designing the website is first to captivate the users' attention and then lead them to the rest of the website. All of the design aspects should ultimately support the website's user-friendly elements.</p>
+     
+            <p>1. Overall</p>
+            <p>The first thing that comes to my mind is to relate each website to a type of landscape. By doing this, I aim to connect the users somehow to my story since it does not share common feats with everyone. Also,it would make the users feel like they are on a journey. To support my nature-scheme website, the primary colour of the website is chosen to be a shade of dark green. It's not too bright to damage one's eyes but also not too dark to be neglected. As a follow-up, the page's background colour should be white with a strong touch of beige to resemble a book's page. Finally, the colour yellow is added to finish the colour palette. Yellow is a controversial colour, and I know many people who despise it. However, I think some types of yellow go great with green and are pleasing to look at. Movie subtitles inspire these shades of yellow. In the end, my three primary colours are green, yellow and light beige. </p>
+            <p>The overall layout of these pages are:</p>
+            <table id="styleTable">
+               <tr>
+                  <th>Elements (in order)</th>
+                  <th>What's in it</th>
+               </tr>
+               <tr>
+                  <td>NavBar</td>
+                  <td>Assignment name and NavButtons</td>
+               </tr>
+               <tr>
+                  <td>Intro</td>
+                  <td>Background image and short intro</td>
+               </tr>
+               <tr>
+                  <td>Website's content</td>
+                  <td>The rest of the website content</td>
+               </tr>
+               <tr>
+                  <td>Footer</td>
+                  <td>Copyright, Uni and subject name, validation</td>
+               </tr>
+            </table>
+            <p>I believe this is a well-structured and modern design for websites, as it is user-friendly and beautiful. The navbar and footer will be the same throughout the pages to maintain a sense of connection. I also added a star favicon because why not.</p>
+            <p class="smallHeading">2. Home Page<p>
+            <p>	This is where the user first lands on when visiting my website. Therefore, it must make a statement and be attractive. To do this, a huge background photo of a mountain with trees and water features was chosen. Next is a huge intro line with a funny little line below to ease the user. Combining these, we have a beautiful opening that resembles a nature documentary/ movie scene. The background photo of many features resembled my present as it combines what was is used later (water and mountain). <br>
+               Moreover, it will make it seem like the user has just travelled somewhere new (the website's theme). With the greeting intro, the user is treated as a traveller into my "digital realm", creating a personal feeling. Also, the intro line would blend too much with the white background when designing the smartphone view. This was an excellent opportunity to utilise a slightly transparent black background. Once again, it is just like the movie's subtitles. <br>
+               Next are the two text paragraphs. Each one has a small heading (h2). The headings are short for a minimalistic look. And both will scale up if hovered over, really making them pop. This helps the user focus on what is being written there. The "Me" part is pink, creating a sense of calm and friendliness as I talk about myself. The "My website" part has a blue background, creating trust and relaxation as it gets technical. <br>
+               Finally, "My Gallery" has three images of what I like. These images are arranged tightly yet seem organised and pleasing to view. This makes my website cleaner and more modern. Hovering over them will give you the description, which help with the minimalistic vibe that I follow.
+            </p>
+            <p class="smallHeading">3. Past, Future and Comment Page<p>
+            <p>Now that the user is more acclimated to the website, the last three websites will be more straightforward. All will have a smaller background picture, with a small intro to tell them the website's purpose. This makes the users feel more used to the website. <br>
+               The past website has a beach (a water feature), often used as the lowest point for measuring (sea level). This resembles the past, which is further back in the timeline. The future has a mountain background, which is high and looks open. This resembles the future, which is further ahead in the timeline, and it is pretty uncertain. The comment's background is a desk, which I would also count as a landscape :). This resonates much with the comment page's content, which is a deep dive into how the website is built. In addition, the comment breaks off from the overall theme in some way (the background, the non-movie font colour). The users must stay locked in and prepare for the technical stuff.<br>
+               All three websites used simple paragraphs with headings and pictures in between to define them better. The past has a table that summarises the entry page. It looks neat and easy to understand, with a nice touch of cell colouring. The future has an ordered list, which is straight to the point. The comment has a combination of both. 
+         <p>
+            Aesthetics are my favourite part of making the website. So, hopefully, you would understand why I talked so much here. If you are wondering how I find such specific colours, I used <a href="https://learn.microsoft.com/en-us/windows/powertoys/">Windows PowerToys</a>.
+         </p>
+         <h2>Accessibility</h2>
+         <p>While designing the website, accessibility is also taken into account. </p>
+         <ul>
+            <li>The navbar is consistent and stays on top of every page for easy navigation.</li>
+            <li>The navbar indicates what page you are on by highlighting the button for that page.</li>
+            <li>The footer is consistent throughout every page to display extra information.</li>
+            <li>The "Go Top" button in the footer let the user easily go back on top of the page.</li>
+            <li>The background color and the text color are highly contrasted with each other, making it easy to read.</li>
+            <li>The chosen font (Arial, Sans serif) is web-safe and helps avoid website crashes or browser incompatibility.</li>
+            <li>The text font and color are very readable.</li>
+            <li>The text passage on the home page pops up, which can help people with low attention span stay focused.</li>
+            <li>Each image has a description and 'alt' should the image not respond.</li>
+            <li>Tables and lists allow a clear view and help the users understand quickly.</li>
+            <li>Design for smartphones and tablets is also considered, with different fitting styles.</li>
+         </ul>
+         <h2>External Sources</h2>
+         <p>Here are the other sources that I used to make my websites: </p>
+         <ul>
+            <li><a href="https://www.youtube.com/watch?v=x4u1yp3Msao">YouTube - How to Create a Table in HTML</a></li>
+            <li><a href="https://www.w3schools.com/css/css_table.asp">W3Schools - CSS Tables</a></li>
+            <li><a href="https://www.w3schools.com/howto/howto_css_full_page.asp">W3Schools - How to Create a Full Page Background Image</a></li>
+            <li><a href="https://www.youtube.com/watch?v=Trw_9lisYVY&amp;t=815s">YouTube - How to Create a Hover Effect in CSS</a></li>
+            <li><a href="https://www.w3schools.com/cssref/sel_hover.php">W3Schools - :hover Selector</a></li>
+            <li><a href="https://www.w3schools.com/howto/howto_js_topnav.asp">W3Schools - How to Create a Responsive Top Navigation Menu with JavaScript and CSS</a></li>
+            <li><a href="https://www.youtube.com/watch?v=Vef9bxTilCU">YouTube - How to Create a Fixed Navigation Bar with HTML and CSS</a></li>
+            <li><a href="https://validator.w3.org/nu/#textarea">W3C Markup Validation Service</a></li>
+            <li><a href="https://jigsaw.w3.org/css-validator/">W3C CSS Validation Service</a></li>
+         </ul>
+         <p>Here are where I got the images:</p>
+         <ul>
+            <li><a href="https://unsplash.com/photos/a-lake-with-trees-and-mountains-in-the-background-DsEpF2KjkC8">background1</a></li>
+            <li><a href="https://surfingairplanes.com/things-to-do-coogee-beach/">background2</a></li>
+            <li><a href="https://unsplash.com/photos/birds-eye-photography-of-snow-covered-mountain-JT-ADySithU">background3</a></li>
+            <li><a href="https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fwww.minimaldesksetups.com%2Fminimal-desk-setups-101%2F&amp;psig=AOvVaw0-Fj4ICYliMtwx4DBdikrJ&amp;ust=1713790674098000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBIQjRxqFwoTCOiXmIWu04UDFQAAAAAdAAAAABAJ">background4</a></li>
+            <li><a href="https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fwww.thedailybeast.com%2Fthe-celtics-jayson-tatum-is-the-nbas-most-boring-superstar&amp;psig=AOvVaw3ilqY9z5tyn3uCHTSFIusF&amp;ust=1713787357464000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBIQjRxqGAoTCPCJqcih04UDFQAAAAAdAAAAABCJAQ">Jayson Tatum</a></li>
+            <li><a href="https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fwww.boredpanda.com%2Fcute-baby-beavers%2F&amp;psig=AOvVaw3u-cnMKxnybYkSFD9Tpmcm&amp;ust=1713790765885000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBIQjRxqFwoTCJiUvaGu04UDFQAAAAAdAAAAABAE">Beaver</a></li>
+            <li><a href="https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fwww.eazydiner.com%2Ffood-trends%2Ftop-6-pizza-places-in-kochi&amp;psig=AOvVaw3KInR2xGzUy4s0rp_DeB_g&amp;ust=1713790781135000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBIQjRxqFwoTCPja96yu04UDFQAAAAAdAAAAABAR">Pizza</a></li>
+            <li><a href="https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fwww.reddit.com%2Fr%2Fprogramming%2Fcomments%2F82ule%2Fwill_code_html_for_food_pic%2F&amp;psig=AOvVaw3IXGaEL1vDGOxgXnkN-tiG&amp;ust=1713790828053000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBIQjRxqFwoTCKDW2r6u04UDFQAAAAAdAAAAABAE">Code for Food meme</a></li>
+            <li><a href="https://favicon.io/emoji-favicons/star/">Star favicon</a></li>
+         </ul>
+      </main>
+      <footer>
+         <p>&copy; Tung Nguyen 2024</p>
+         <p>(∩｀-´)⊃━☆ﾟ.*･｡ﾟ</p>
+         <a class="Top" href="#top">Go Top</a>
+      </footer>
+   </body>
+</html>
